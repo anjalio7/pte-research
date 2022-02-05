@@ -1,0 +1,11 @@
+<div *ngIf = "show; else anotherBlock">
+    <h4>{{timer}}</h4>
+    <button (click) = "skipTimer()">Skip</button>
+</div>
+
+<ng-template #anotherBlock>
+    <div>
+        Hello
+    </div>
+</ng-template>
+

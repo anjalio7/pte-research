@@ -1,0 +1,8 @@
+<span *ngFor="let word of text; let i = index">
+    <select *ngIf = "word.inp; else unchanged" >
+        <option [value] = "word.word" *ngFor = "let j of word.choices">
+            {{j}}
+        </option>
+    </select>
+    <ng-template #unchanged>{{word.word}} </ng-template>
+</span>

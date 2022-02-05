@@ -1,0 +1,19 @@
+<span class="p-2 mb-4" *ngFor = "let word of text; let i = index">
+
+    
+    <span class="dropped border" [id] = "'input'+i" (drop)="drop($event)" (dragover)="allowDrop($event)" *ngIf = "word.inp; else unchanged" [attr.data-position] = "i"></span>
+
+    <ng-template #unchanged>
+        {{word.word}}
+    </ng-template>
+</span>
+<br>
+<div class="d-flex" id="drag-area">
+    <span  class="mr-3 border dropped" *ngFor = "let w of newchoicesArray; let ind = index" (dragover)="allowDrop($event)" (drop)="drop($event)">
+        <span [id]="'span'+ind" draggable="true" (dragstart)="drag($event)" [class.bg-dark] = "w.dropped" [class.border] = "!w.dropped" [attr.data-word] = "w.word">
+        {{w.word}}
+        </span>
+    </span>
+</div>
+
+<button (click) = "getValues()">Submit</button>

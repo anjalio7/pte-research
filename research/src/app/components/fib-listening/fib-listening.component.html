@@ -1,0 +1,4 @@
+<span *ngFor="let word of objArray; let i = index">
+    <input name = "index" type="text" *ngIf = "word.changed; else unchanged" (change) = "changeInput(i, $event)">
+    <ng-template #unchanged>{{word.word}} </ng-template>
+</span>
