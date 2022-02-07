@@ -1,0 +1,8 @@
+<h1>{{permission}}</h1>
+
+<div *ngIf = "permission; else notallowed">
+    <h3>permission allowed</h3>
+</div>
+<ng-template #notallowed>
+    Microphone permission is not granted
+</ng-template>

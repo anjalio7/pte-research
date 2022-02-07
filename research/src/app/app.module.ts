@@ -9,6 +9,9 @@ import { FibListeningComponent } from './components/fib-listening/fib-listening.
 import { SkipTimerComponent } from './components/skip-timer/skip-timer.component';
 import { ReorderComponent } from './components/reorder/reorder.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MicrophoneComponent } from './components/microphone/microphone.component';
+import { RecordAudioComponent } from './components/record-audio/record-audio.component';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +20,14 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     FibReadingWritingComponent,
     FibListeningComponent,
     SkipTimerComponent,
-    ReorderComponent
+    ReorderComponent,
+    MicrophoneComponent,
+    RecordAudioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DragDropModule
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
